@@ -1,5 +1,5 @@
 sudo: required
-dist: trusty
+dist: bionic
 before_install:
 - mkdir $HOME/.fonts
 - cd $HOME/.fonts
