@@ -1,22 +1,14 @@
-sudo: required
-dist: bionic
+language: ruby
+
+services:
+  - docker
 before_install:
-- mkdir $HOME/.fonts
-- cd $HOME/.fonts
-- wget https://github.com/dolbydu/font/raw/master/mono/Courier%20New.ttf
-- wget https://github.com/dolbydu/font/raw/master/mono/Courier%20New%20Bold.ttf
-- wget https://github.com/dolbydu/font/raw/master/mono/Courier%20New%20Italic.ttf
-- wget https://github.com/dolbydu/font/raw/master/mono/Courier%20New%20Bold%20Italic.ttf
-- wget https://github.com/dolbydu/font/raw/master/unicode/Microsoft%20Yahei.ttf
-- wget https://github.com/dolbydu/font/raw/master/unicode/Microsoft%20Yahei%20Bold.ttf
-- fc-cache -f -v
-- cd -
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+- docker pull vincentydchen/resume-builder
 script:
-- mkdir $TRAVIS_BUILD_DIR/_build
-- cd tex_version
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory ../_build resume_vincent.tex
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory ../_build resume_yi_dong.tex
+- cd $HOME; GIT_SSL_NO_VERIFY=1 git clone https://github.com/VincentYChen/resume.git
+- cd $HOME/resume/tex_version; \
+      mkdir ../_build; \
+      xelatex -interaction=nonstopmode -halt-on-error -output-directory ../_build resume_vincent.tex
 deploy:
   provider: releases
   api_key:
