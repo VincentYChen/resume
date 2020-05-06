@@ -1,9 +1,8 @@
 \documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
@@ -15,55 +14,50 @@
 
 % personal data
 \name{YiDong}{Chen}
-\title{IT Associate}                               % optional, remove / comment the line if not wanted
-\phone[mobile]{+1~(646)~240~0230}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be
-\email{vincent.yd.chen@gmail.com}                               % optional, remove / comment the line if not wanted
-\social[linkedin]{vincentychen}                        % optional, remove / comment the line if not wanted
-\social[github]{VincentYChen}                              % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{pic/vincent}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\title{IT Associate}
+\phone[mobile]{+1~(646)~240~0230}
+\email{vincent.yd.chen@gmail.com}
+\social[linkedin]{vincentychen}
+\social[github]{VincentYChen}      
+\photo[64pt][0.4pt]{pic/vincent}
 
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
-%-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Summary}
-%TODO: add more keywords
-\cvitem{}{5 years core C++ developer on Linux Platform }
-\cvitem{}{2 year core Scala/Java developer}
+
+\cvitem{}{5 years C++/Linux developer on low latency application infra}
+\cvitem{}{2 years Scala/Java application developer}
 
 \section{Education}
-\cventry{2008-2012}{Bachelor Degree}{East China Normal University(ECNU)}{Shanghai}{Communication Engineering}{}
+\cventry{2008-2012}{Bachelor Degree}{East China Normal University}{Shanghai, China}{Communication Engineering}{}
 
 \section{Experience}
 \subsection{Vocational}
-\cventry{2018.9-Present}{Associate}{Morgan Stanley}{NYC, United States}{}{%
+\cventry{2018.9-Present}{IT Associate}{Morgan Stanley}{NYC, United States}{}{%
 Daily work includes:%
 \begin{itemize}%
-    \item \textbf{Pre trading workflow for Interest Rate Products}  
+    \item \textbf{Trading Quote Tool for Interest Rate Derivative}  
     \begin{itemize}
-        \item Provide the tool widely used in the Option/Swap desk to fullfill the needs for pretrading workflow
-        \item Understand the business requirement and provide proper solutions
-        \item Main contributor inside the team to provide bug free, elegant code change to the largest scala codebase in the world to meet with delivery requirement
-        \item Lead the code quality improvement for the product through code review and suggestions to colleagues.
-        \item Cut daily report generation time from 90 minutes to 6 seconds.
+        \item Develop and maintain the new generation of trading application for sales and traders using fix income products
+        \item Main contributor on teams' most actively evolving features.
+        \item Keep quick delivery on features to users while keep refactoring to make code clean.
+        \item Find root cause for tricky bugs and provide proper fix. Sometimes looks for the infra code and find the root cause.
     \end{itemize}
     \item \textbf{Techical stack}
     \begin{itemize}
     \item Scala, Java, Functional Programing
+    \item Git, VIM, VS Code, Intellij
     \end{itemize}
 \end{itemize}
 }
-\cventry{2015.6-2018.9}{Associate}{Morgan Stanley}{Shanghai, China}{}{%
+\cventry{2015.6-2018.9}{IT Associate}{Morgan Stanley}{Shanghai, China}{}{%
 Daily work includes:%
 \begin{itemize}%
 \item \textbf{High throughput, Low latency trading infra}
     \begin{itemize}
-    \item Develop and maintain infra code serve the core trading applications across the firm, and manage the complexity of enormous use cases.
+    \item Develop and maintain infra code serve the core equity trading applications across the firm, and manage the complexity of enormous use cases.
     \item Handle tricky problems escalated by application team.
     \item Sometimes bug is hidden inside projects owned by application teams, which requires quick understanding and good trouble shooting skills.
     \item Work with application team to discover the real bottleneck in their application, and find possible optimization directions inside infra.
@@ -77,7 +71,7 @@ Daily work includes:%
     \item \textbf{Tools}
         \begin{itemize}
         \item clang-tidy, Valgrind/Callgrind, MS Profiling Tool(Probe Points)
-        \item jenkins, Git(stashblue), BASH, VIM, Sublime, Eclipse
+        \item Jenkins, Git, BASH, VIM, Sublime, Eclipse
         \end{itemize}
     \end{itemize}
 \end{itemize}}
@@ -99,28 +93,10 @@ Daily work includes:%
         \begin{itemize}
         \item Load Balancer, Switch
         \item cpp-check, Valgrind/Callgrind
-        \item jenkins, Git, BASH, Eclipse
+        \item Jenkins, Git, BASH, Eclipse
         \end{itemize}
     \end{itemize}
-% \item \textbf{Multimedia Content Delivery over 3G, Backend}
-%     \begin{itemize}
-%     \item C++ application in solaris platform, event driven, hundreds of channels delivery with low latency.
-%     \item Be responsible for PDU 24*7 emergency call, provides support to outage from customers.
-%     \item Handle problem reported by customer, and provide fix in the earlist phase.
-%     \item \textbf{Techical stack}
-%         \begin{itemize}
-%         \item C++, Solaris, RTSP, RTP, ACE, Agile Software Management
-%         \end{itemize}
-%     \item \textbf{Tools}
-%         \begin{itemize}
-%         \item Load Balancer, Switch
-%         \item Dtrace, libumem
-%         \end{itemize}
-%     \end{itemize}
 \end{itemize}}
-
-\section{Languages}
-\cvitem{English}{Working proficiency, CET6 certificate}
 
 \clearpage
 
